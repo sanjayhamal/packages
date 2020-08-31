@@ -1,15 +1,15 @@
 Package: NumericMind
-Title: What the Package Does (One Line, Title Case)
+Title: Table creation package for Numeric Mind.
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Sanjay",
+           family = "Hamal",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "sanjayhamal99@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+Description: The package is used to create a normal table using nm_table(), a stratified/grouped table using nm_stratify() and summary of a subset table using nm_anymedication().
+
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

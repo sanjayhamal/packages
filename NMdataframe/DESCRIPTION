@@ -1,0 +1,15 @@
+Package: NMdataframe
+Title: The package creates a dataframe using csv file of metadataviewer file.
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Sanjay",
+           family = "Hamal",
+           role = c("aut", "cre"),
+           email = "sanjayhamal99@gmail.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: The assigned variables are automatically generated along with empty assigned and derived variables in an ordered way.For more details, open the R code present in the git hub profile from where the pacakge was downloaded
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1

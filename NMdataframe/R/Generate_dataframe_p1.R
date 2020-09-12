@@ -29,8 +29,9 @@
 #' previous_function_variable: It is the variable that you used for storing the metadata() function.
 
 #' @export
-metadata<- function(metadata_file, create){
-  guide<- metadata_file
+metadata<- function(path_metadata_file, create){
+  guide<- read_excel(path = path_metadata_file, sheet = 'Variables')
+  guide<- as.data.frame(guide)
   to_create = create
   guide1<- guide %>% filter(DATASET==to_create)
   predecessor<- guide1 %>% filter(SOURCE_VAR!="" & is.na(SOURCE_VAR)==F & lengths(strsplit(SOURCE_VAR, "\\W+"))<3)
@@ -58,8 +59,6 @@ metadata<- function(metadata_file, create){
   list1<- list(predecessor, assigned, main_file, guide1)
   return(list1)
 }
-
-
 
 
 

@@ -1,17 +1,14 @@
 #'Generate dataframe ia a package that will help to create predecessors
 #'files along with empty assigned variables arranged in an order.
+
+#' Libraries 'tidyverse', 'haven', 'readxl' are required for this package to work correctly.
+#'The only thing required is the path of folder containing the metadataviewer file.
 #'
-#'A csv file containing information about variables from metadataviewer 
-#'file is required.
-
-#'First, load the csv file containing only variables from the metadaviewer file.
-
 #'The first step is using: metadata() function.
-#'syntax: metadata(metadata_file, create)
+#'syntax: metadata(path_metadata_file, create)
 
-#'metadata_file: The csv file containing the information about varibles form
-#'               metadataviewer file.
-#'create       : The dataset you want to create(Example: 'adae')
+#'path_metadata_file: It is the path or directory which contains the metadataviewer file. The extension is .xlsm
+#'create       :      The dataset you want to create(Example: 'adae' or 'adsl' and so on)
 
 
 
@@ -26,7 +23,7 @@
 #'                             and it should be inserted as a list: example: generate_dataframe(required_files = list(a, b, c, ..), )
 
 
-#' previous_function_variable: It is the variable that you used for storing the metadata() function.
+#' previous_function         : It is the variable that you used for storing the metadata() function.
 
 #' @export
 metadata<- function(path_metadata_file, create){
@@ -54,7 +51,7 @@ metadata<- function(path_metadata_file, create){
   }
   
   main_file<- main_file[!is.na(main_file)]
-  print("After importing, Put the files as a list in this sequence in next function: generate_dataframe(required_files = list()) ")
+  print("After importing, Put the files as a list in this sequence in next function: generate_dataframe(required_files = list(), previous_function= __) ")
   print(main_file)
   list1<- list(predecessor, assigned, main_file, guide1)
   return(list1)

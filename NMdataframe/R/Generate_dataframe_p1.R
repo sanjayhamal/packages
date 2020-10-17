@@ -40,9 +40,11 @@ metadata<- function(path_metadata_file, create){
   print("Import these files from sdtm or adam folder: " )
   print(to_import)
   
-  
+
   main_file<- predecessor %>% filter(variables=='USUBJID')
   main_file<- unique(c(main_file$source))
+
+  ### use apply functions instead
   for(i in seq(length(to_import))){
     if(main_file[1]!= to_import[i]){
       main_file[length(main_file)+i]= to_import[i]
